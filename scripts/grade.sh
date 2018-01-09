@@ -36,4 +36,4 @@ fi
 
 echo Running tests
 echo `pwd`
-./homework${HW_NUMBER}_test
+./homework${HW_NUMBER}/homework${HW_NUMBER}_test
