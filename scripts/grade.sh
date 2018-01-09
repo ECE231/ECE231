@@ -6,18 +6,17 @@ if [ "$#" -ne 1 ]; then
   exit -1
 fi
 echo Grading submitted file $1
-echo Extracting homework number from file name
 FILENAME=$(basename $1 .tar.gz)
 HW_NUMBER=${FILENAME: -2}
 
-echo $FILENAME
+echo Extracting homework number ${HW_NUMBER} from file name
 echo Unzipping source directory
 tar -xzf $1
 
 echo building code
 mkdir build 
 cd build
-cmake ../ECE231
+cmake ../ECE231 > cmake_output.txt
 if [ $? -eq 0 ] 
 then
   echo cmake succeeded
@@ -25,7 +24,7 @@ else
   echo "CMAKE FAILED: CAN'T CONTINUE"
   exit -1
 fi
-make
+make > make_output.txt
 if [ $? -eq 0 ] 
 then
   echo make succeeded
@@ -36,4 +35,4 @@ fi
 
 echo Running tests
 echo `pwd`
-./homework${HW_NUMBER}/homework${HW_NUMBER}_test
+./homework${HW_NUMBER}_test
