@@ -2,7 +2,7 @@
   Copyright 2018 J. West
  */
 #include <math.h>
-#include "ECE231/mycode.h"
+#include "ECE231/homework00.h"
 double squareRoot(const double a) {
   double b = sqrt(a);
   if (b != b) {    // nan check
