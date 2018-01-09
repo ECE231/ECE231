@@ -49,3 +49,12 @@ homeworkXX_test
 the output will be verified and you will be deducted for each test that fails accoridng to the assignment.
 The grading script is inculded in this respository so that you can run it against your tar.gz file.  
 # Be sure to test your tar.gz file with this script before submitting it!
+
+Your working directory should look like this:
+\
+   \ECE232
+      \homework00
+      \homework01
+   \build
+      \homework00
+      \homework01
