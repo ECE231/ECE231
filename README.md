@@ -6,6 +6,17 @@ git clone https://github.com/ECE231/ECE231.git
 ```
 Which will create a directory called ECE231 in the directory in which you run the command.
 This is the directory in which you will do all of your work.
+To build the code create a build directory named build and then change directories into it
+```
+mkdir build; cd build
+```
+Then build the code
+```
+cmake ../ECE231
+make
+```
+This will create all of the executables based on the CMakeLists.txt file
+
 
 Your work must be submitted as single gzipped tar file named
 ```
