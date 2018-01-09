@@ -50,7 +50,8 @@ the output will be verified and you will be deducted for each test that fails ac
 The grading script is inculded in this respository so that you can run it against your tar.gz file.  
 # Be sure to test your tar.gz file with this script before submitting it!
 
-Your working directory should look like this:
+After building, your working directory should look like this:
+```
 \
    \ECE232
       \homework00
@@ -58,3 +59,4 @@ Your working directory should look like this:
    \build
       \homework00
       \homework01
+```
