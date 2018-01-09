@@ -1,38 +1,27 @@
 #! /bin/bash
+# This grades a homework assignment
+# call it from the build directory like (to grade HW01)
+#  ../ECE231/scripts/grade.sh 01
+# it will print the results of running cpplint and 
+# the GTest codes produced by homeworkXX_test
+echo --------------------------------------------------
 echo Grading script for ECE231 homework submissions
 if [ "$#" -ne 1 ]; then
-  echo You must supply the name of the tar.gz file to grade
-  echo "USAGE: grade.sh <file to grade>"
+  echo You must supply the homework number to grade
+  echo "USAGE: grade.sh <XX>"
+  echo "  Where XX is the homework number"
+  echo "  Must be run from project build directory which must have"
+  echo "  the same parent as ECE231"
   exit -1
 fi
-echo Grading submitted file $1
-FILENAME=$(basename $1 .tar.gz)
-HW_NUMBER=${FILENAME: -2}
+HW_NUMBER=$1
+echo Grading Homework ${HW_NUMBER}
 
-echo Extracting homework number ${HW_NUMBER} from file name
-echo Unzipping source directory
-tar -xzf $1
+echo Running cpplint ----------------------------------
+cpplint ../ECE231/homework${HW_NUMBER}/src/*.cpp ../ECE231/homework${HW_NUMBER}/include/homework${HW_NUMBER}/*.h 
 
-echo building code
-mkdir build 
-cd build
-cmake ../ECE231 > cmake_output.txt
-if [ $? -eq 0 ] 
-then
-  echo cmake succeeded
-else
-  echo "CMAKE FAILED: CAN'T CONTINUE"
-  exit -1
-fi
-make > make_output.txt
-if [ $? -eq 0 ] 
-then
-  echo make succeeded
-else
-  echo "MAKE FAILED: CAN'T CONTINUE"
-  exit -1
-fi
-
-echo Running tests
+echo Running tests ------------------------------------
 echo `pwd`
 ./homework${HW_NUMBER}_test
+echo --------------------------------------------------
+exit 0
