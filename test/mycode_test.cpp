@@ -2,7 +2,7 @@
   Copyright 2018 J. West
  */
 #include <gtest/gtest.h>
-#include "mycode/mycode.h"
+#include "ECE231/mycode.h"
 TEST(SquareRootTest, PositiveNos) {
   ASSERT_EQ(6, squareRoot(36.0));
   ASSERT_EQ(18.0, squareRoot(324.0));
