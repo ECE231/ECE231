@@ -18,7 +18,7 @@ HW_NUMBER=$1
 echo Grading Homework ${HW_NUMBER}
 
 echo Running cpplint ----------------------------------
-cpplint ../ECE231/homework${HW_NUMBER}/src/*.cpp ../ECE231/homework${HW_NUMBER}/include/homework${HW_NUMBER}/*.h 
+../ECE231/scripts/cpplint.py ../ECE231/homework${HW_NUMBER}/src/*.cpp ../ECE231/homework${HW_NUMBER}/include/homework${HW_NUMBER}/*.h 
 
 echo Running tests ------------------------------------
 echo `pwd`
