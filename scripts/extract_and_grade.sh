@@ -7,11 +7,14 @@ if [ "$#" -ne 1 ]; then
 fi
 echo Grading submitted file $1
 FILENAME=$(basename $1 .tar.gz)
+echo Extracting homework number ${HW_NUMBER} from file name
 HW_NUMBER=${FILENAME: -2}
 
-echo Extracting homework number ${HW_NUMBER} from file name
+mkdir $FILENAME
+cd $FILENAME
+
 echo Unzipping source directory
-tar -xzf $1
+tar -xzf ../$1
 
 echo building code
 mkdir build 
@@ -33,4 +36,4 @@ else
   exit -1
 fi
 
-grade.sh
+../ECE231/scripts/grade.sh $HW_NUMBER
