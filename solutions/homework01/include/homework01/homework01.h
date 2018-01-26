@@ -1,0 +1,7 @@
+/***
+  Copyright 2018 J. West
+ */
+#ifndef HOMEWORK01_INCLUDE_HOMEWORK01_HOMEWORK01_H_
+#define HOMEWORK01_INCLUDE_HOMEWORK01_HOMEWORK01_H_
+double calculatePi(const int numOfDivisions);
+#endif  // HOMEWORK01_INCLUDE_HOMEWORK01_HOMEWORK01_H_

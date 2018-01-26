@@ -1,0 +1,11 @@
+These are the solutions for the homeworks.
+I put them in this separate directory so that they would not overwrite your own code in the /ECE231 directory.
+To compile and run them, you must copy them to the ECE231 directory. If you have your own homework01 directory, you can rename it so that it will not be woverwritten by using (from your ECE231 directory):
+
+ mv homework01 my_homework01
+
+Then you can copy the solution homework01 to your ECE231 directory by (from the ECE231 directory):
+
+ cp -r solutions/homework01 .
+
+The CMakeList.txt file is only setup to compile the current assignment so to copmile an older one, edit CMakeLists.txt and remove the comments from the assignment you want to compile.
