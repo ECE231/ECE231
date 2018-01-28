@@ -4,23 +4,22 @@
 #include <gtest/gtest.h>
 #include "homework02/homework02.h"
 TEST(permutations, limits) {
-  EXPECT_EQ(permutations(0, 0), 0);
+  EXPECT_EQ(permutations(0, 0), 1);
   EXPECT_EQ(permutations(10, 0), 0);
-  EXPECT_EQ(permutations(0, 10), 0);
-  EXPECT_EQ(permutations(-1, 0), 0);
-  EXPECT_EQ(permutations(0, -1), 0);
+  // k can't be greater than n so this is an invalid value
   EXPECT_EQ(permutations(10, 11), 0);
 }
   
 TEST(permutations, all) {
   EXPECT_EQ(permutations(52, 2), 2652);
 }
+
 TEST(combinations, limits) {
-  EXPECT_EQ(combinations(0, 0), 0);
-  EXPECT_EQ(combinations(10, 0), 0);
+  // factorial of 0 is 1
+  EXPECT_EQ(combinations(0, 0), 1);
   EXPECT_EQ(combinations(0, 10), 0);
-  EXPECT_EQ(combinations(-1, 0), 0);
-  EXPECT_EQ(combinations(0, -1), 0);
+  // k can't be greater than n so this is an invalid value
+  EXPECT_EQ(permutations(10, 11), 0);
 }
 
 TEST(combinations, all) {
