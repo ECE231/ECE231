@@ -31,7 +31,7 @@ bool compareFiles(const std::string &file1, const std::string &file2) {
 
 
 TEST(tabs_to_spaces, all) {
-  tabs_to_spaces("tab_input.txt", 4, "tab_output.txt");
+  tabs_to_spaces("tab_input.txt", 2, "tab_output.txt");
   EXPECT_TRUE(compareFiles("tab_output.txt", "tab_correct_result.txt"));
 }
   

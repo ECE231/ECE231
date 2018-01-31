@@ -24,3 +24,13 @@ add_subdirectory(homework03)
 include_directories(homework03/include)
 add_executable(homework03_test test/homework03_test.cpp)
 target_link_libraries(homework03_test ${GTEST_LIBRARIES} pthread homework03)
+add_custom_command(
+        TARGET homework03_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/test/tab_input.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/tab_input.txt)
+add_custom_command(
+        TARGET homework03_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/test/tab_correct_result.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/tab_correct_result.txt)
