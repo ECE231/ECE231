@@ -5,6 +5,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS} include)
 
 add_subdirectory(grading)
+include_directories(grading/include)
 
 add_subdirectory(homework00)
 include_directories(homework00/include)
