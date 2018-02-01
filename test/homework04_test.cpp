@@ -2,6 +2,7 @@
 #include <gtest/gtest.h>
 #include <fstream>
 #include "homework04/homework04.h"
+#include "grading/compare_files.h"
 
 TEST(histogram, all) {
   int res = std::system("histogram good_input.txt > output.txt");
