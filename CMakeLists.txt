@@ -4,6 +4,8 @@ project (ECE231)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS} include)
 
+add_subdirectory(grading)
+
 add_subdirectory(homework00)
 include_directories(homework00/include)
 add_executable(homework00_test test/homework00_test.cpp)
@@ -34,3 +36,23 @@ add_custom_command(
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${CMAKE_SOURCE_DIR}/test/tab_correct_result.txt
                 ${CMAKE_CURRENT_BINARY_DIR}/tab_correct_result.txt)
+
+add_subdirectory(homework04)
+include_directories(homework04/include)
+add_executable(homework04_test test/homework04_test.cpp)
+target_link_libraries(homework04_test ${GTEST_LIBRARIES} pthread homework04 compare_files)
+add_custom_command(
+        TARGET homework04_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/test/good_input.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/good_input.txt)
+add_custom_command(
+        TARGET homework04_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/test/bad_input.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/bad_input.txt)
+add_custom_command(
+        TARGET homework04_test POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+                ${CMAKE_SOURCE_DIR}/test/correct_output.txt
+                ${CMAKE_CURRENT_BINARY_DIR}/correct_output.txt)
