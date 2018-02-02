@@ -9,7 +9,8 @@
 int gcd(int n, int d);
 
 Rational::Rational() {
-  num = den = 0;
+  num = 0;
+  den = 1;
 }
 
 Rational::Rational(int n) {
