@@ -4,33 +4,33 @@ project (ECE231)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS} include)
 
-add_subdirectory(homework00)
-include_directories(homework00/include)
-add_executable(homework00_test test/homework00_test.cpp)
-target_link_libraries(homework00_test ${GTEST_LIBRARIES} pthread homework00)
+add_subdirectory(test/compare_files)
+include_directories(test/compare_files/include)
 
-# if you want to compile HW01, uncomment these lines
-#add_subdirectory(homework01)
-#include_directories(homework01/include)
-#add_executable(homework01_test test/homework01_test.cpp)
-#target_link_libraries(homework01_test ${GTEST_LIBRARIES} pthread homework01)
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework00)
+  include_directories(homework00/include)
+  add_subdirectory(test/homework00_test)
+endif()
 
-#add_subdirectory(homework02)
-#include_directories(homework02/include)
-#add_executable(homework02_test test/homework02_test.cpp)
-#target_link_libraries(homework02_test ${GTEST_LIBRARIES} pthread homework02)
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework01)
+  include_directories(homework01/include)
+  add_subdirectory(test/homework01_test)
+endif()
 
-add_subdirectory(homework03)
-include_directories(homework03/include)
-add_executable(homework03_test test/homework03_test.cpp)
-target_link_libraries(homework03_test ${GTEST_LIBRARIES} pthread homework03)
-add_custom_command(
-        TARGET homework03_test POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy
-                ${CMAKE_SOURCE_DIR}/test/tab_input.txt
-                ${CMAKE_CURRENT_BINARY_DIR}/tab_input.txt)
-add_custom_command(
-        TARGET homework03_test POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy
-                ${CMAKE_SOURCE_DIR}/test/tab_correct_result.txt
-                ${CMAKE_CURRENT_BINARY_DIR}/tab_correct_result.txt)
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework02)
+  include_directories(homework02/include)
+  add_subdirectory(test/homework02_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework03)
+  include_directories(homework03/include)
+  add_subdirectory(test/homework03_test)
+endif()
