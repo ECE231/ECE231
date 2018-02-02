@@ -1,8 +1,8 @@
 /***
   Copyright 2018 J. West
  */
-#ifndef HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H
-#define HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H
+#ifndef HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H_
+#define HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H_
 #include <string>
 #include <iostream>
 
@@ -27,4 +27,4 @@ Rational operator-(Rational r1, Rational R2);
 Rational operator*(Rational r1, Rational R2);
 Rational operator/(Rational r1, Rational R2);
 
-#endif  // HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H
+#endif  // HOMEWORK05_INCLUDE_HOMEWORK05_RATIONAL_H_
