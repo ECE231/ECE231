@@ -4,6 +4,9 @@ project (ECE231)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS} include)
 
+add_subdirectory(test/compare_files)
+include_directories(test/compare_files/include)
+
 # if you want to compile this homework, set it to "if(1)"
 if(0)
   add_subdirectory(homework00)
@@ -26,8 +29,15 @@ if(0)
 endif()
 
 # if you want to compile this homework, set it to "if(1)"
-if(1)
+if(0)
   add_subdirectory(homework03)
   include_directories(homework03/include)
   add_subdirectory(test/homework03_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework04)
+  include_directories(homework04/include)
+  add_subdirectory(test/homework04_test)
 endif()
