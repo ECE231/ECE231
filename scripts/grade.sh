@@ -21,6 +21,7 @@ echo Running cpplint ----------------------------------
 ../ECE231/scripts/cpplint.py ../ECE231/homework${HW_NUMBER}/src/*.cpp ../ECE231/homework${HW_NUMBER}/include/homework${HW_NUMBER}/*.h 
 
 echo Running tests ------------------------------------
+cd test/homework${HW_NUMBER}_test
 echo `pwd`
 ./homework${HW_NUMBER}_test
 echo --------------------------------------------------
