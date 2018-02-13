@@ -36,8 +36,15 @@ if(0)
 endif()
 
 # if you want to compile this homework, set it to "if(1)"
-if(1)
+if(0)
   add_subdirectory(homework04)
   include_directories(homework04/include)
   add_subdirectory(test/homework04_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework05)
+  include_directories(homework05/include)
+  add_subdirectory(test/homework05_test)
 endif()
