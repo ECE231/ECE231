@@ -69,27 +69,47 @@ TEST(rational, less_equal) {
 }
 
 TEST(rational, plus_equal) {
-  EXPECT_TRUE(Rational(15,45) == Rational(12,45) += Rational(3,45));
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(15,45) == (r += Rational(3,45)));
 }
 
 TEST(rational, minus_equal) {
-  EXPECT_TRUE(Rational(9,45) == Rational(12,45) -= Rational(3,45));
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(9,45) == (r -= Rational(3,45)));
 }
 
 TEST(rational, times_equal) {
-  EXPECT_TRUE(Rational(36,2025) == Rational(12,45) *= Rational(3,45));
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(36,2025) == (r *= Rational(3,45)));
 }
 
 TEST(rational, div_equal) {
-  EXPECT_TRUE(Rational(4) == Rational(12,45) *= Rational(3,45));
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(4) == (r /= Rational(3,45)));
 }
 
-TEST(rational, increment) {
-  EXPECT_TRUE(Rational(57,45) == ++Rational(12,45));
+TEST(rational, pre_decrement) {
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(-33,45) == --r);
+  EXPECT_TRUE(Rational(-33,45) == r);
 }
 
-TEST(rational, decrement) {
-  EXPECT_TRUE(Rational(-33,45) == --Rational(12,45));
+TEST(rational, post_decrement) {
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(12,45) == r--);
+  EXPECT_TRUE(Rational(-33,45) == r);
+}
+
+TEST(rational, pre_increment) {
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(57,45) == ++r);
+  EXPECT_TRUE(Rational(57,45) == r);
+}
+
+TEST(rational, post_increment) {
+  Rational r(12,45);
+  EXPECT_TRUE(Rational(12,45) == r++);
+  EXPECT_TRUE(Rational(57,45) == r);
 }
 
 int main(int argc, char **argv) {
