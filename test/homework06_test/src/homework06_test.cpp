@@ -12,9 +12,17 @@ bool checkWeights(
   for (int i : left) sum_left += i;
   int sum_right = 0;
   for (int i : right) sum_right += i;
+
+  std::cout << "Left => " << target << '\t';
+  for (int i : left) std::cout << i << '\t';
+  std::cout << std::endl;
+  std::cout << "Right => ";
+  for (int i : right) std::cout << i << '\t';
+  std::cout << std::endl;
+
   EXPECT_TRUE(sum_left == sum_right);
 }
-  
+
 TEST(balance, one) {
   std::vector<int> left, right;
   std::vector<int> weights = {10, 20, 30, 40};
@@ -22,7 +30,7 @@ TEST(balance, one) {
   EXPECT_TRUE(findBalance(target, weights, left, right));
   checkWeights(target, weights, left, right);
 }
- 
+
 TEST(balance, two) {
   std::vector<int> left, right;
   std::vector<int> weights = {10, 20, 30};
