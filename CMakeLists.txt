@@ -7,6 +7,8 @@ include_directories(${GTEST_INCLUDE_DIRS} include)
 add_subdirectory(test/compare_files)
 include_directories(test/compare_files/include)
 
+include_directories(StanfordCPPLib)
+
 # if you want to compile this homework, set it to "if(1)"
 if(0)
   add_subdirectory(homework00)
@@ -43,8 +45,15 @@ if(0)
 endif()
 
 # if you want to compile this homework, set it to "if(1)"
-if(1)
+if(0)
   add_subdirectory(homework05)
   include_directories(homework05/include)
   add_subdirectory(test/homework05_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework07)
+  include_directories(homework07/include)
+  add_subdirectory(test/homework07_test)
 endif()
