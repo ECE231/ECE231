@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
+set (CMAKE_CXX_STANDARD 11)
 project (ECE231)
+
 # Locate GTest
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS} include)
@@ -43,8 +45,15 @@ if(0)
 endif()
 
 # if you want to compile this homework, set it to "if(1)"
-if(1)
+if(0)
   add_subdirectory(homework05)
   include_directories(homework05/include)
   add_subdirectory(test/homework05_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework06)
+  include_directories(homework06/include)
+  add_subdirectory(test/homework06_test)
 endif()
