@@ -25,4 +25,5 @@ cd test/homework${HW_NUMBER}_test
 echo `pwd`
 ./homework${HW_NUMBER}_test
 echo --------------------------------------------------
+echo $0
 exit 0
