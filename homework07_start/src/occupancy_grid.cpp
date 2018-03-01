@@ -10,11 +10,7 @@
 OccupancyGrid::OccupancyGrid(const std::string &filename) {
   readFile(filename);
 }
-/*
-void OccupancyGrid::MarkSquare(Point p, State s) {
-  GetSquare(p).set_state(s);
-}
-*/
+
 Point OccupancyGrid::getStartPosition() {
   for (int r = 0 ; r < size_.y ; r++) {
     for (int c = 0 ; c < size_.x ; c++) {
@@ -27,12 +23,7 @@ Point OccupancyGrid::getStartPosition() {
 bool OccupancyGrid::isOutside(Point pt) {
   return pt.x < 0 || pt.x >= size_.x || pt.y < 0 || pt.y >= size_.y;
 }
-/*
-State OccupancyGrid::GetState(Point pt) {
-  if (isOutside(pt)) return OUTSIDE;
-  return GetSquare(pt).state();
-}
-*/
+
 Point OccupancyGrid::getPoint(Point pt, Direction d) {
   Point p = pt;
   if (d == N) p.y--;
@@ -41,26 +32,6 @@ Point OccupancyGrid::getPoint(Point pt, Direction d) {
   else if (d == W) p.x--;
   return p;
 }
-/*
-State OccupancyGrid::GetState(Point pt, Direction d) {
-  Point p = GetPoint(pt, d);
-  if (isOutside(p)) return OUTSIDE;
-  return GetSquare(p).state();
-}
-*/
-/*
-bool OccupancyGrid::isClear(Point pt, Direction d) {
-  return GetState(pt, d) == EMPTY;
-}
-*/
-/*
-Point OccupancyGrid::Move(Point pt, Direction d) {
-  Point p = GetPoint(pt, d);
-  if (GetState(p) == EMPTY) return p;
-  throw std::string("Tried to move to a point " +
-    p.to_string() + " that is not EMPTY");
-}
-*/
 
 Square &OccupancyGrid::getSquare(Point pt) {
   if (isOutside(pt)) throw std::string("Coordinates (" + pt.to_string() +
@@ -71,11 +42,7 @@ Square &OccupancyGrid::getSquare(Point pt) {
 Square &OccupancyGrid::getSquare(Point pt, Direction d) {
   return getSquare(getPoint(pt, d));
 }
-/*
-bool OccupancyGrid::isMarked(Point pt) {
-  return GetSquare(pt).state() == MARKED;
-}
-*/
+
 void OccupancyGrid::readFile(const std::string &filename) {
   computeSize(filename);
 
