@@ -19,3 +19,8 @@ add_custom_command(
   COMMAND ${CMAKE_COMMAND} -E copy
   ${CMAKE_CURRENT_SOURCE_DIR}/data/correct_output.txt
   ${CMAKE_CURRENT_BINARY_DIR}/correct_output.txt)
+add_custom_command(
+  TARGET homework07_test POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy
+  ${CMAKE_CURRENT_SOURCE_DIR}/data/correct_output_with_start.txt
+  ${CMAKE_CURRENT_BINARY_DIR}/correct_output_with_start.txt)
