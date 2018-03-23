@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.6)
+set (CMAKE_CXX_STANDARD 11)
+project(homework07)
+
+include_directories(include)
+add_library(point src/point.cpp)
+add_library(square src/square.cpp)
+add_library(occupancy_grid src/occupancy_grid.cpp)
+add_library(solver src/solver.cpp)
+add_executable(solve_maze src/main.cpp)
+target_link_libraries(solve_maze occupancy_grid point square solver)
