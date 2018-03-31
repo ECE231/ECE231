@@ -61,13 +61,13 @@ if(0)
 endif()
 
 # if you want to compile this homework, set it to "if(1)"
-if(1)
+if(0)
   add_subdirectory(homework07)
   include_directories(homework07/include)
   add_subdirectory(test/homework07_test)
 endif()
 # if you want to compile this homework, set it to "if(1)"
-if(0)
+if(1)
   add_subdirectory(homework09)
   include_directories(homework09/include)
   add_subdirectory(test/homework09_test)
