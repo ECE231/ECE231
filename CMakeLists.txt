@@ -13,62 +13,14 @@ include_directories(StanfordCPPLib)
 
 # if you want to compile this homework, set it to "if(1)"
 if(0)
-  add_subdirectory(homework00)
-  include_directories(homework00/include)
-  add_subdirectory(test/homework00_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework01)
-  include_directories(homework01/include)
-  add_subdirectory(test/homework01_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework02)
-  include_directories(homework02/include)
-  add_subdirectory(test/homework02_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework03)
-  include_directories(homework03/include)
-  add_subdirectory(test/homework03_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework04)
-  include_directories(homework04/include)
-  add_subdirectory(test/homework04_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework05)
-  include_directories(homework05/include)
-  add_subdirectory(test/homework05_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework06)
-  include_directories(homework06/include)
-  add_subdirectory(test/homework06_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework07)
-  include_directories(homework07/include)
-  add_subdirectory(test/homework07_test)
-endif()
-# if you want to compile this homework, set it to "if(1)"
-if(1)
   add_subdirectory(homework09)
   include_directories(homework09/include)
   add_subdirectory(test/homework09_test)
+endif()
+
+# if you want to compile this homework, set it to "if(1)"
+if(1)
+  add_subdirectory(homework10)
+  include_directories(homework10/include)
+  add_subdirectory(test/homework10_test)
 endif()
