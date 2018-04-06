@@ -12,15 +12,8 @@ include_directories(test/compare_files/include)
 include_directories(StanfordCPPLib)
 
 # if you want to compile this homework, set it to "if(1)"
-if(0)
-  add_subdirectory(homework09)
-  include_directories(homework09/include)
-  add_subdirectory(test/homework09_test)
-endif()
-
-# if you want to compile this homework, set it to "if(1)"
 if(1)
-  add_subdirectory(homework10)
-  include_directories(homework10/include)
-  add_subdirectory(test/homework10_test)
+  add_subdirectory(homework11)
+  include_directories(homework11/include)
+  add_subdirectory(test/homework11_test)
 endif()
