@@ -13,7 +13,7 @@ include_directories(StanfordCPPLib)
 
 # if you want to compile this homework, set it to "if(1)"
 if(1)
-  add_subdirectory(homework11)
-  include_directories(homework11/include)
-  add_subdirectory(test/homework11_test)
+  add_subdirectory(homework12)
+  include_directories(homework12/include)
+  add_subdirectory(test/homework12_test)
 endif()

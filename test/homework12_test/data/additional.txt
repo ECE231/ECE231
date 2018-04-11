@@ -1,0 +1,9 @@
+a
+aa:a
+ab:a
+aba:ab
+abb:ab
+abaa:aba
+ac:a
+acc:ac
+ad:a
