@@ -1,0 +1,29 @@
+Graph has 10 nodes and 12 arcs
+Nodes:
+	Atlanta
+	Chicago
+	Dallas
+	New York
+	Boston
+	Seattle
+	Denver
+	Las Angeles
+	Portland
+	San Fransisco
+Arcs:
+	Dallas to San Fransisco 954 miles
+	Atlanta to Chicago 599 miles
+	Atlanta to Dallas 725 miles
+	Atlanta to New York 756 miles
+	Boston to New York 191 miles
+	Boston to Seattle 2489 miles
+	Chicago to Denver 907 miles
+	Dallas to Denver 650 miles
+	Dallas to Las Angeles 1240 miles
+	Denver to San Fransisco 954 miles
+	Portland to San Fransisco 550 miles
+	Portland to Seattle 130 miles
+looking for path from Atlanta to Denver
+Path has 2 segments and 1375 miles
+Atlanta to Dallas 725 miles
+Dallas to Denver 650 miles
