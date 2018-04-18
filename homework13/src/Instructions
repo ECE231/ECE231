@@ -1,0 +1,7 @@
+I give you the working version of Dijkstra's algorithm.
+I also give you the header for the Graph class.
+Your assignment is to write the function definitions for the graph class.
+I gave you a couple of them in graph_base.cpp and all of the CMake files necessary
+
+You must create a new file "graph.cpp" which holds the remianing functions from 
+the graph.h declarations.
