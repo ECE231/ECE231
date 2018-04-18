@@ -1,13 +1,10 @@
 cmake_minimum_required(VERSION 2.6)
 project (homework13_test)
-# Locate GTest
-find_package(GTest REQUIRED)
-include_directories(${GTEST_INCLUDE_DIRS} include)
 
 include_directories(test/homework13_test/include)
 
 add_executable(homework13_test src/homework13_test.cpp)
-target_link_libraries(homework13_test ${GTEST_LIBRARIES} pthread graph dijkstra compare_files)
+target_link_libraries(homework13_test gtest pthread graph dijkstra compare_files)
 
 add_custom_command(
   TARGET homework13_test POST_BUILD
