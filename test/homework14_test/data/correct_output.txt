@@ -1,0 +1,3 @@
+Name = Salary Sam : Salary = 1000.000000 earned 1000
+Name = Hourly Hal : Hourly Rate = 15.000000 : Hours Worked = 40.000000 earned 600
+Name = Commissioned Carl : Base Salary = 1000.000000 : Commission Rate = 0.050000 : Sales Volume = 1000000.000000 earned 51000
