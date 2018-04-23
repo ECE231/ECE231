@@ -20,6 +20,7 @@ std::ostream &operator<<(std::ostream &os, const Path &p) {
     os << a->start->name << " to " << a->finish->name << " " <<
       a->cost << " miles\n";
   }
+  return os;
 }
 
 Path findShortestPath(Graph &g,
