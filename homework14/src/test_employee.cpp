@@ -2,6 +2,7 @@
   Copyright 2018 J. West
  */
 #include <iostream>
+#include <vector>
 #include "homework14/employee.h"
 int main(int argc, char **argv) {
   std::vector<Employee *> employees;

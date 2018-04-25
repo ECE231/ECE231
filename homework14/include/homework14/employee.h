@@ -14,7 +14,7 @@ class Employee {
     /***
      * Constructor needs employee name
      */
-    Employee(std::string name);
+    explicit Employee(std::string name);
     /***
      * return a copy of the name
      */
@@ -29,7 +29,8 @@ class Employee {
      * "Name = <name_>"
      */
     virtual std::string toString() const;
-  private: 
+
+  private:
     /*** 
      * name of the employee
      */
@@ -50,6 +51,7 @@ class HourlyEmployee : public Employee {
      * information as in the test result file "
      */
     std::string toString() const;
+
   private:
     double hourly_rate_;
     double hours_worked_;
@@ -70,28 +72,30 @@ class CommissionedEmployee : public Employee {
      * information as in the test result file "
      */
     std::string toString() const;
+
   private:
     double commission_rate_;
     double base_salary_;
     double sales_volume_;
-    friend std::ostream &operator<<(std::ostream &, const CommissionedEmployee &e);
+    friend std::ostream &operator<<(std::ostream &,
+        const CommissionedEmployee &e);
 };
 std::ostream &operator<<(std::ostream &, const CommissionedEmployee &e);
 
 class SalariedEmployee : public Employee {
   using Employee::Employee;
   public:
-    virtual double getPay();
-    void setSalary(double salary);
-    /***
-     * create a string from employee information
-     * should output
-     * information as in the test result file "
-     */
-    std::string toString() const;
+  virtual double getPay();
+  void setSalary(double salary);
+  /***
+   * create a string from employee information
+   * should output
+   * information as in the test result file "
+   */
+  std::string toString() const;
   private:
-    double salary_;
-    friend std::ostream &operator<<(std::ostream &, const SalariedEmployee &e);
+  double salary_;
+  friend std::ostream &operator<<(std::ostream &, const SalariedEmployee &e);
 };
 std::ostream &operator<<(std::ostream &, const SalariedEmployee &e);
 

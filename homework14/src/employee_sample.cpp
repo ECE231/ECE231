@@ -17,7 +17,7 @@ std::ostream &operator<<(std::ostream &os, const SalariedEmployee &e) {
 }
 
 std::string SalariedEmployee::toString() const {
-  return std::string(Employee::toString() + 
+  return std::string(Employee::toString() +
   " : Salary = " + std::to_string(salary_));
 }
 
