@@ -5,10 +5,12 @@
 
 TEST(graph, good) {
   int res = std::system("../../homework13/test_dijkstra map.txt Atlanta Denver > output1.txt");
+  EXPECT_EQ(res, 0);
   EXPECT_TRUE(compare_files("output1.txt", "correct_output1.txt"));
 }
 TEST(graph, none) {
   int res = std::system("../../homework13/test_dijkstra map.txt Atlanta Portland > output2.txt");
+  EXPECT_EQ(res, 0);
   EXPECT_TRUE(compare_files("output2.txt", "correct_output2.txt"));
 }
 
