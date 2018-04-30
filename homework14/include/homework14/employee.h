@@ -18,11 +18,11 @@ class Employee {
     /***
      * return a copy of the name
      */
-    std::string getName();
+    std::string getName() const;
     /***
      * return the pay due
      */
-    virtual double getPay() = 0;
+    virtual double getPay() const = 0;
     /***
      * create a string from employee information
      * should output
@@ -42,7 +42,7 @@ std::ostream &operator<<(std::ostream &, const Employee &e);
 class HourlyEmployee : public Employee {
   using Employee::Employee;
   public:
-    virtual double getPay();
+    virtual double getPay() const;
     void setHourlyRate(double rate);
     void setHoursWorked(double hours);
     /***
@@ -62,7 +62,7 @@ std::ostream &operator<<(std::ostream &, const HourlyEmployee &e);
 class CommissionedEmployee : public Employee {
   using Employee::Employee;
   public:
-    virtual double getPay();
+    virtual double getPay() const;
     void setBaseSalary(double dollars);
     void setCommissionRate(double rate);
     void setSalesVolume(double dollars);
@@ -85,7 +85,7 @@ std::ostream &operator<<(std::ostream &, const CommissionedEmployee &e);
 class SalariedEmployee : public Employee {
   using Employee::Employee;
   public:
-  virtual double getPay();
+  virtual double getPay() const;
   void setSalary(double salary);
   /***
    * create a string from employee information

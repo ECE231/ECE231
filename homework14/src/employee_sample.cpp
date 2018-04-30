@@ -4,7 +4,7 @@
 #include "homework14/employee.h"
 #include <string>
 
-double SalariedEmployee::getPay(void) {
+double SalariedEmployee::getPay(void) const {
   return salary_;
 }
 
